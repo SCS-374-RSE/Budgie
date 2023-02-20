@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Budgie.CreateBudgetPage"
+             Title="Create New Budget Page">
+
+    <ScrollView>
+        <StackLayout
+            Orientation="Vertical"
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                 />
+
+            <Label
+                Text="Lets Create A Budget!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+            <StackLayout
+                Orientation="Horizontal"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Spacing="25"
+                Padding="30">
+
+                <Entry
+                    Text="Budget Name"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center"/>
+
+                <Picker x:Name="picker"
+                    Title="Budget Type"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Daily</x:String>
+                                <x:String>Weekly</x:String>
+                                <x:String>Monthly</x:String>
+                                <x:String>Yearly</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
+
+                <Entry
+                    Text="Take Home Amount USD"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center"/>
+            </StackLayout>
+
+            <StackLayout
+                Spacing="10">
+
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="60">
+
+                    <Label
+                    Text="Enter expense type:"
+                    FontSize="14"/>
+
+                    <Label
+                   Text="Enter cost:"
+                   FontSize="14"/>
+
+                </StackLayout>
+
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="30">
+
+                    <Entry
+                   FontSize="14"
+                   WidthRequest="175"/>
+
+                    <Entry
+                   FontSize="14"
+                   WidthRequest="125"/>
+
+                </StackLayout>
+
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="60">
+
+                    <Label
+                    Text="Enter expense type:"
+                    FontSize="14"/>
+
+                    <Label
+                   Text="Enter cost:"
+                   FontSize="14"/>
+
+                </StackLayout>
+
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="30">
+
+                    <Entry
+                   FontSize="14"
+                   WidthRequest="175"/>
+
+                    <Entry
+                   FontSize="14"
+                   WidthRequest="125"/>
+
+                </StackLayout>
+
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="60">
+
+                    <Label
+                    Text="Enter expense type:"
+                    FontSize="14"/>
+
+                    <Label
+                   Text="Enter cost:"
+                   FontSize="14"/>
+
+                </StackLayout>
+
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="30">
+
+                    <Entry
+                   FontSize="14"
+                   WidthRequest="175"/>
+
+                    <Entry
+                   FontSize="14"
+                   WidthRequest="125"/>
+
+                </StackLayout>
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="60">
+
+                    <Label
+                    Text="Enter expense type:"
+                    FontSize="14"/>
+
+                    <Label
+                   Text="Enter cost:"
+                   FontSize="14"/>
+
+                </StackLayout>
+
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="30">
+
+                    <Entry
+                   FontSize="14"
+                   WidthRequest="175"/>
+
+                    <Entry
+                   FontSize="14"
+                   WidthRequest="125"/>
+
+                </StackLayout>
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="60">
+
+                    <Label
+                    Text="Enter expense type:"
+                    FontSize="14"/>
+
+                    <Label
+                   Text="Enter cost:"
+                   FontSize="14"/>
+
+                </StackLayout>
+
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="30">
+
+                    <Entry
+                   FontSize="14"
+                   WidthRequest="175"/>
+
+                    <Entry
+                   FontSize="14"
+                   WidthRequest="125"/>
+
+                </StackLayout>
+            </StackLayout>
+
+            <Button
+                x:Name="SubmitBtn"
+                Text="Submit budget info"
+                SemanticProperties.Hint="Submits budget info"
+                Clicked="SubmitBtn_Clicked"
+                HorizontalOptions="Center"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
