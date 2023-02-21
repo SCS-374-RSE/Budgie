@@ -6,10 +6,22 @@
     xmlns:local="clr-namespace:Budgie"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <ShellContent
+            Title="Create"
+            ContentTemplate="{DataTemplate local:CreateBudgetPage}"
+            Route="CreateBudgetPage" />
+
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:HomePage}"
+            Route="HomePage"/>
+
+        <ShellContent
+            Title="View"
+            ContentTemplate="{DataTemplate local:ViewBudgetPage}"
+            Route="ViewBudgetPage"/>
+    </TabBar>
 
 </Shell>
 
