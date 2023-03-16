@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Input;
+using CommunityToolkit.Mvvm.ComponentModel;
 namespace Budgie
 {
     public class CreatePageViewModel : INotifyPropertyChanged
@@ -12,8 +13,7 @@ namespace Budgie
 
         public ICommand SubmitFormCommand { get; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
+        // Input from the create page
         public string budgetName { get; set; }
         public int takeHomeAmt { get; set; }
         public string budgetType { get; set; }
@@ -30,9 +30,46 @@ namespace Budgie
         public int expenseCostFour { get; set; }
         public int expenseCostFive { get; set; }
 
+        // Calculations using data from the create page
+        public int remainder { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        void OnPropertyChanged(string name) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+
         public void OnFormSubmission()
         {
-            budgetName.ToLower();
+            remainder = takeHomeAmt - expenseCostOne - expenseCostTwo - expenseCostThree - expenseCostFour - expenseCostFive;
+
+            // Still need to somehow send variable data to view page before resetting the values
+
+            // Reset input fields
+            budgetName = "";
+            takeHomeAmt = 0;
+            budgetType = "";
+            expenseTypeOne = "";
+            expenseTypeTwo = "";
+            expenseTypeThree = "";
+            expenseTypeFour = "";
+            expenseTypeFive = "";
+            expenseCostOne = 0;
+            expenseCostTwo = 0;
+            expenseCostThree = 0;
+            expenseCostFour = 0;
+            expenseCostFive = 0;
+            OnPropertyChanged(nameof(budgetName));
+            OnPropertyChanged(nameof(takeHomeAmt));
+            OnPropertyChanged(nameof(budgetType));
+            OnPropertyChanged(nameof(expenseTypeOne));
+            OnPropertyChanged(nameof(expenseTypeTwo));
+            OnPropertyChanged(nameof(expenseTypeThree));
+            OnPropertyChanged(nameof(expenseTypeFour));
+            OnPropertyChanged(nameof(expenseTypeFive));
+            OnPropertyChanged(nameof(expenseCostOne));
+            OnPropertyChanged(nameof(expenseCostTwo));
+            OnPropertyChanged(nameof(expenseCostThree));
+            OnPropertyChanged(nameof(expenseCostFour));
+            OnPropertyChanged(nameof(expenseCostFive));
         }
     }
 }
