@@ -64,11 +64,11 @@
                 Spacing="60">
 
                     <Label
-                    Text="Enter expense type:"
+                    Text="                        "
                     FontSize="14"/>
 
                     <Label
-                   Text="Enter cost:"
+                   Text="Cost:"
                    FontSize="14"/>
 
                 </StackLayout>
@@ -79,13 +79,33 @@
                 VerticalOptions="Center"
                 Spacing="30">
 
+<<<<<<< Updated upstream
                     <Entry
                    FontSize="14"
                    WidthRequest="175"/>
+=======
+                <Picker
+                    SelectedItem="{Binding expenseTypeOne}"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center"
+                    Title="Expense Type">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Food</x:String>
+                                <x:String>Bills</x:String>
+                                <x:String>Savings</x:String>
+                                <x:String>Recreational</x:String>
+                                <x:String>Other</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
+>>>>>>> Stashed changes
 
                     <Entry
-                   FontSize="14"
-                   WidthRequest="125"/>
+                    Placeholder="USD"
+                    Text="{Binding expenseCostOne}"
+                    FontSize="14"
+                    WidthRequest="125"/>
 
                 </StackLayout>
 
@@ -96,11 +116,11 @@
                 Spacing="60">
 
                     <Label
-                    Text="Enter expense type:"
+                    Text="                        "
                     FontSize="14"/>
 
                     <Label
-                   Text="Enter cost:"
+                   Text="Cost:"
                    FontSize="14"/>
 
                 </StackLayout>
@@ -111,13 +131,33 @@
                 VerticalOptions="Center"
                 Spacing="30">
 
+<<<<<<< Updated upstream
                     <Entry
                    FontSize="14"
                    WidthRequest="175"/>
+=======
+                <Picker
+                    SelectedItem="{Binding expenseTypeTwo}"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center"
+                    Title="Expense Type">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Food</x:String>
+                                <x:String>Bills</x:String>
+                                <x:String>Savings</x:String>
+                                <x:String>Recreational</x:String>
+                                <x:String>Other</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
+>>>>>>> Stashed changes
 
                     <Entry
-                   FontSize="14"
-                   WidthRequest="125"/>
+                    Placeholder="USD"
+                    Text="{Binding expenseCostTwo}"
+                    FontSize="14"
+                    WidthRequest="125"/>
 
                 </StackLayout>
 
@@ -128,11 +168,11 @@
                 Spacing="60">
 
                     <Label
-                    Text="Enter expense type:"
+                    Text="                        "
                     FontSize="14"/>
 
                     <Label
-                   Text="Enter cost:"
+                   Text="Cost:"
                    FontSize="14"/>
 
                 </StackLayout>
@@ -143,13 +183,33 @@
                 VerticalOptions="Center"
                 Spacing="30">
 
+<<<<<<< Updated upstream
                     <Entry
                    FontSize="14"
                    WidthRequest="175"/>
+=======
+                <Picker
+                    SelectedItem="{Binding expenseTypeThree}"    
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center"
+                    Title="Expense Type">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Food</x:String>
+                                <x:String>Bills</x:String>
+                                <x:String>Savings</x:String>
+                                <x:String>Recreational</x:String>
+                                <x:String>Other</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
+>>>>>>> Stashed changes
 
                     <Entry
-                   FontSize="14"
-                   WidthRequest="125"/>
+                    Placeholder="USD"
+                    Text="{Binding expenseCostThree}"
+                    FontSize="14"
+                    WidthRequest="125"/>
 
                 </StackLayout>
                 <StackLayout
@@ -159,11 +219,11 @@
                 Spacing="60">
 
                     <Label
-                    Text="Enter expense type:"
+                    Text="                        "
                     FontSize="14"/>
 
                     <Label
-                   Text="Enter cost:"
+                   Text="Cost:"
                    FontSize="14"/>
 
                 </StackLayout>
@@ -174,13 +234,33 @@
                 VerticalOptions="Center"
                 Spacing="30">
 
+<<<<<<< Updated upstream
                     <Entry
                    FontSize="14"
                    WidthRequest="175"/>
+=======
+                <Picker
+                    SelectedItem="{Binding expenseTypeFour}"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center"
+                    Title="Expense Type">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Food</x:String>
+                                <x:String>Bills</x:String>
+                                <x:String>Savings</x:String>
+                                <x:String>Recreational</x:String>
+                                <x:String>Other</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
+>>>>>>> Stashed changes
 
                     <Entry
-                   FontSize="14"
-                   WidthRequest="125"/>
+                    Placeholder="USD"
+                    Text="{Binding expenseCostFour}"
+                    FontSize="14"
+                    WidthRequest="125"/>
 
                 </StackLayout>
                 <StackLayout
@@ -190,11 +270,11 @@
                 Spacing="60">
 
                     <Label
-                    Text="Enter expense type:"
+                    Text="                        "
                     FontSize="14"/>
 
                     <Label
-                   Text="Enter cost:"
+                   Text="Cost:"
                    FontSize="14"/>
 
                 </StackLayout>
@@ -205,13 +285,33 @@
                 VerticalOptions="Center"
                 Spacing="30">
 
+<<<<<<< Updated upstream
                     <Entry
                    FontSize="14"
                    WidthRequest="175"/>
+=======
+                <Picker
+                    SelectedItem="{Binding expenseTypeFive}"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center"
+                    Title="Expense Type">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Food</x:String>
+                                <x:String>Bills</x:String>
+                                <x:String>Savings</x:String>
+                                <x:String>Recreational</x:String>
+                                <x:String>Other</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
+>>>>>>> Stashed changes
 
                     <Entry
-                   FontSize="14"
-                   WidthRequest="125"/>
+                    Placeholder="USD"
+                    Text="{Binding expenseCostFive}"
+                    FontSize="14"
+                    WidthRequest="125"/>
 
                 </StackLayout>
             </StackLayout>
