@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Budgie.CreateBudgetPage"
-             Title="Create New Budget Page">
+             Title="Create New Budget Page"
+             xmlns:local="clr-namespace:Budgie"
+             x:DataType="local:CreatePageViewModel">
 
     <ScrollView>
         <StackLayout
@@ -30,11 +32,13 @@
                 Padding="30">
 
                 <Entry
-                    Text="Budget Name"
+                    Placeholder="Budget Name"
+                    Text="{Binding budgetName}"
                     WidthRequest="200"
                     HorizontalTextAlignment="Center"/>
 
-                <Picker x:Name="picker"
+                <Picker
+                    SelectedItem="{Binding budgetType}"
                     Title="Budget Type"
                     WidthRequest="200"
                     HorizontalTextAlignment="Center">
@@ -49,7 +53,8 @@
                 </Picker>
 
                 <Entry
-                    Text="Take Home Amount USD"
+                    Text="{Binding takeHomeAmt}"
+                    Placeholder="Take Home Amount USD"
                     WidthRequest="200"
                     HorizontalTextAlignment="Center"/>
             </StackLayout>
@@ -79,11 +84,6 @@
                 VerticalOptions="Center"
                 Spacing="30">
 
-<<<<<<< Updated upstream
-                    <Entry
-                   FontSize="14"
-                   WidthRequest="175"/>
-=======
                 <Picker
                     SelectedItem="{Binding expenseTypeOne}"
                     WidthRequest="200"
@@ -99,7 +99,7 @@
                             </x:Array>
                         </Picker.ItemsSource>
                 </Picker>
->>>>>>> Stashed changes
+
 
                     <Entry
                     Placeholder="USD"
@@ -131,11 +131,6 @@
                 VerticalOptions="Center"
                 Spacing="30">
 
-<<<<<<< Updated upstream
-                    <Entry
-                   FontSize="14"
-                   WidthRequest="175"/>
-=======
                 <Picker
                     SelectedItem="{Binding expenseTypeTwo}"
                     WidthRequest="200"
@@ -151,7 +146,6 @@
                             </x:Array>
                         </Picker.ItemsSource>
                 </Picker>
->>>>>>> Stashed changes
 
                     <Entry
                     Placeholder="USD"
@@ -183,11 +177,6 @@
                 VerticalOptions="Center"
                 Spacing="30">
 
-<<<<<<< Updated upstream
-                    <Entry
-                   FontSize="14"
-                   WidthRequest="175"/>
-=======
                 <Picker
                     SelectedItem="{Binding expenseTypeThree}"    
                     WidthRequest="200"
@@ -203,7 +192,7 @@
                             </x:Array>
                         </Picker.ItemsSource>
                 </Picker>
->>>>>>> Stashed changes
+
 
                     <Entry
                     Placeholder="USD"
@@ -234,11 +223,6 @@
                 VerticalOptions="Center"
                 Spacing="30">
 
-<<<<<<< Updated upstream
-                    <Entry
-                   FontSize="14"
-                   WidthRequest="175"/>
-=======
                 <Picker
                     SelectedItem="{Binding expenseTypeFour}"
                     WidthRequest="200"
@@ -254,7 +238,7 @@
                             </x:Array>
                         </Picker.ItemsSource>
                 </Picker>
->>>>>>> Stashed changes
+
 
                     <Entry
                     Placeholder="USD"
@@ -285,11 +269,6 @@
                 VerticalOptions="Center"
                 Spacing="30">
 
-<<<<<<< Updated upstream
-                    <Entry
-                   FontSize="14"
-                   WidthRequest="175"/>
-=======
                 <Picker
                     SelectedItem="{Binding expenseTypeFive}"
                     WidthRequest="200"
@@ -305,7 +284,7 @@
                             </x:Array>
                         </Picker.ItemsSource>
                 </Picker>
->>>>>>> Stashed changes
+
 
                     <Entry
                     Placeholder="USD"
@@ -317,10 +296,9 @@
             </StackLayout>
 
             <Button
-                x:Name="SubmitBtn"
                 Text="Submit budget info"
                 SemanticProperties.Hint="Submits budget info"
-                Clicked="SubmitBtn_Clicked"
+                Command="{Binding SubmitFormCommand}"
                 HorizontalOptions="Center"/>
 
         </StackLayout>
