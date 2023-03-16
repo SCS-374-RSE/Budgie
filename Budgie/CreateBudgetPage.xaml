@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Budgie.CreateBudgetPage"
-             Title="Create New Budget Page">
+             Title="Create New Budget Page"
+             xmlns:local="clr-namespace:Budgie"
+             x:DataType="local:CreatePageViewModel">
 
     <ScrollView>
         <StackLayout
@@ -14,14 +16,14 @@
             <Image
                 Source="dotnet_bot.png"
                 SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                 />
+                HeightRequest="200"/>
 
             <Label
                 Text="Lets Create A Budget!"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
                 HorizontalOptions="Center" />
+
             <StackLayout
                 Orientation="Horizontal"
                 VerticalOptions="Center"
@@ -30,11 +32,14 @@
                 Padding="30">
 
                 <Entry
-                    Text="Budget Name"
+                    Placeholder="Budget Name"
+                    Text="{Binding budgetName}"
+                    PlaceholderColor="Gray"
                     WidthRequest="200"
                     HorizontalTextAlignment="Center"/>
 
-                <Picker x:Name="picker"
+                <Picker
+                    SelectedItem="{Binding budgetType}"
                     Title="Budget Type"
                     WidthRequest="200"
                     HorizontalTextAlignment="Center">
@@ -49,7 +54,10 @@
                 </Picker>
 
                 <Entry
-                    Text="Take Home Amount USD"
+                    Placeholder="Take Home Amount USD"
+                    Text="{Binding takeHomeAmt}"
+                    PlaceholderColor="Gray"
+                    Keyboard="Numeric"
                     WidthRequest="200"
                     HorizontalTextAlignment="Center"/>
             </StackLayout>
@@ -79,9 +87,19 @@
                 VerticalOptions="Center"
                 Spacing="30">
 
-                    <Entry
-                   FontSize="14"
-                   WidthRequest="175"/>
+                    <Picker x:Name="expenseTypePickerOne"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Food</x:String>
+                                <x:String>Bills</x:String>
+                                <x:String>Savings</x:String>
+                                <x:String>Recreational</x:String>
+                                <x:String>Other</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
 
                     <Entry
                    FontSize="14"
@@ -111,9 +129,19 @@
                 VerticalOptions="Center"
                 Spacing="30">
 
-                    <Entry
-                   FontSize="14"
-                   WidthRequest="175"/>
+                    <Picker x:Name="expenseTypePickerTwo"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Food</x:String>
+                                <x:String>Bills</x:String>
+                                <x:String>Savings</x:String>
+                                <x:String>Recreational</x:String>
+                                <x:String>Other</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
 
                     <Entry
                    FontSize="14"
@@ -143,9 +171,19 @@
                 VerticalOptions="Center"
                 Spacing="30">
 
-                    <Entry
-                   FontSize="14"
-                   WidthRequest="175"/>
+                    <Picker x:Name="expenseTypePickerThree"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Food</x:String>
+                                <x:String>Bills</x:String>
+                                <x:String>Savings</x:String>
+                                <x:String>Recreational</x:String>
+                                <x:String>Other</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
 
                     <Entry
                    FontSize="14"
@@ -174,9 +212,19 @@
                 VerticalOptions="Center"
                 Spacing="30">
 
-                    <Entry
-                   FontSize="14"
-                   WidthRequest="175"/>
+                    <Picker x:Name="expenseTypePickerFour"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Food</x:String>
+                                <x:String>Bills</x:String>
+                                <x:String>Savings</x:String>
+                                <x:String>Recreational</x:String>
+                                <x:String>Other</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
 
                     <Entry
                    FontSize="14"
@@ -205,9 +253,19 @@
                 VerticalOptions="Center"
                 Spacing="30">
 
-                    <Entry
-                   FontSize="14"
-                   WidthRequest="175"/>
+                    <Picker x:Name="expenseTypePickerFive"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Food</x:String>
+                                <x:String>Bills</x:String>
+                                <x:String>Savings</x:String>
+                                <x:String>Recreational</x:String>
+                                <x:String>Other</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
 
                     <Entry
                    FontSize="14"
@@ -217,10 +275,10 @@
             </StackLayout>
 
             <Button
-                x:Name="SubmitBtn"
                 Text="Submit budget info"
-                SemanticProperties.Hint="Submits budget info"
-                Clicked="SubmitBtn_Clicked"
+                TextColor="LimeGreen"
+                BackgroundColor="Gray"
+                Command="{Binding SubmitFormCommand}"
                 HorizontalOptions="Center"/>
 
         </StackLayout>
