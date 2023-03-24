@@ -66,5 +66,9 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <None Remove="CommunityToolkit.Mvvm" />
+	  <None Remove="ViewModels\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 </Project>

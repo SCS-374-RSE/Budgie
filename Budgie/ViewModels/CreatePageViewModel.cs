@@ -1,14 +1,17 @@
 ﻿using System;
+using CommunityToolkit.Mvvm.Input;
+using CommunityToolkit.Mvvm;
+using CommunityToolkit.Mvvm.ComponentModel;
 using System.ComponentModel;
 using System.Windows.Input;
-using CommunityToolkit.Mvvm.ComponentModel;
-namespace Budgie
+
+namespace Budgie.ViewModels
 {
-    public class CreatePageViewModel : INotifyPropertyChanged
-    {
+    public partial class CreatePageViewModel : INotifyPropertyChanged
+    {       
         public CreatePageViewModel()
         {
-            SubmitFormCommand = new Command(OnFormSubmission);
+            SubmitFormCommand = new Command(OnFormSubmission);            
         }
 
         public ICommand SubmitFormCommand { get; }
@@ -30,6 +33,9 @@ namespace Budgie
         public int expenseCostFour { get; set; }
         public int expenseCostFive { get; set; }
 
+        Task Navigate() =>
+            Shell.Current.GoToAsync($"{nameof(ViewBudgetPage)}?BudgetName={budgetName}");
+
         // Calculations using data from the create page
         public int remainder { get; set; }
 
@@ -39,6 +45,7 @@ namespace Budgie
 
         public void OnFormSubmission()
         {
+            Navigate();
             remainder = takeHomeAmt - expenseCostOne - expenseCostTwo - expenseCostThree - expenseCostFour - expenseCostFive;
 
             // Still need to somehow send variable data to view page before resetting the values
