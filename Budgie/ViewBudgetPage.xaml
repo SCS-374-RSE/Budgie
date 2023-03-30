@@ -2,11 +2,34 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Budgie.ViewBudgetPage"
-             Title="ViewBudgetPage">
+             Title="ViewBudgetPage"
+             xmlns:viewmodel="clr-namespace:Budgie.ViewModels"
+             x:DataType="viewmodel:ViewPageViewModel">
     <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <TableView Intent="Data">
+            <TableRoot>
+                <TableSection Title="{Binding BudgetName}">
+                    <TextCell Text="{Binding BudgetType}"/>
+                    
+                    <TextCell Text="{Binding ExpenseTypeOne}"
+                            Detail="{Binding ExpenseCostOne}" />
+
+                    <TextCell Text="{Binding ExpenseTypeTwo}"
+                            Detail="{Binding ExpenseCostTwo}" />
+
+                    <TextCell Text="{Binding ExpenseTypeThree}"
+                            Detail="{Binding ExpenseCostThree}" />
+
+                    <TextCell Text="{Binding ExpenseTypeFour}"
+                            Detail="{Binding ExpenseCostFour}" />
+
+                    <TextCell Text="{Binding ExpenseTypeFive}"
+                            Detail="{Binding ExpenseCostFive}" />
+
+                    <TextCell Text="Remainder"
+                            Detail="{Binding Remainder}" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
     </VerticalStackLayout>
 </ContentPage>
