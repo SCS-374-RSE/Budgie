@@ -34,7 +34,7 @@ namespace Budgie.ViewModels
         public int expenseCostFive { get; set; }
 
         Task Navigate() =>
-            Shell.Current.GoToAsync($"{nameof(ViewBudgetPage)}?BudgetName={budgetName}");
+            Shell.Current.GoToAsync($"{nameof(ViewBudgetPage)}?BudgetName={budgetName}&BudgetType={budgetType}&TakeHomeAmt={takeHomeAmt}&ExpenseTypeOne={expenseTypeOne}&ExpenseTypeTwo={expenseTypeTwo}&ExpenseTypeThree={expenseTypeThree}&ExpenseTypeFour={expenseTypeFour}&ExpenseTypeFive={expenseTypeFive}&ExpenseCostOne={expenseCostOne}&ExpenseCostTwo={expenseCostTwo}&ExpenseCostThree={expenseCostThree}&ExpenseCostFour={expenseCostFour}&ExpenseCostFive={expenseCostFive}&Remainder={remainder}");
 
         // Calculations using data from the create page
         public int remainder { get; set; }
@@ -44,11 +44,9 @@ namespace Budgie.ViewModels
         void OnPropertyChanged(string name) => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 
         public void OnFormSubmission()
-        {
-            Navigate();
+        {            
             remainder = takeHomeAmt - expenseCostOne - expenseCostTwo - expenseCostThree - expenseCostFour - expenseCostFive;
-
-            // Still need to somehow send variable data to view page before resetting the values
+            Navigate();
 
             // Reset input fields
             budgetName = "";
