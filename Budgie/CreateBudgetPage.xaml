@@ -4,6 +4,7 @@
              x:Class="Budgie.CreateBudgetPage"
              Title="Create New Budget Page"
              xmlns:viewmodel="clr-namespace:Budgie.ViewModels"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:DataType="viewmodel:CreatePageViewModel">
 
     <ScrollView>
@@ -31,10 +32,11 @@
                 Spacing="25"
                 Padding="30">
 
-                <Entry
+                <Entry                    
                     Placeholder="Budget Name"
                     Text="{Binding budgetName}"
                     WidthRequest="200"
+                    MaxLength="50"
                     HorizontalTextAlignment="Center"/>
 
                 <Picker
@@ -56,6 +58,8 @@
                     Text="{Binding takeHomeAmt}"
                     Placeholder="Take Home Amount USD"
                     WidthRequest="200"
+                    MaxLength="20"
+                    Keyboard="Numeric"
                     HorizontalTextAlignment="Center"/>
             </StackLayout>
 
@@ -104,6 +108,8 @@
                     <Entry
                     Placeholder="USD"
                     Text="{Binding expenseCostOne}"
+                    Keyboard="Numeric"
+                    MaxLength="20"
                     FontSize="14"
                     WidthRequest="125"/>
 
@@ -150,6 +156,8 @@
                     <Entry
                     Placeholder="USD"
                     Text="{Binding expenseCostTwo}"
+                    Keyboard="Numeric"
+                    MaxLength="20"
                     FontSize="14"
                     WidthRequest="125"/>
 
@@ -197,6 +205,8 @@
                     <Entry
                     Placeholder="USD"
                     Text="{Binding expenseCostThree}"
+                    Keyboard="Numeric"
+                    MaxLength="20"
                     FontSize="14"
                     WidthRequest="125"/>
 
@@ -243,6 +253,8 @@
                     <Entry
                     Placeholder="USD"
                     Text="{Binding expenseCostFour}"
+                    Keyboard="Numeric"
+                    MaxLength="20"
                     FontSize="14"
                     WidthRequest="125"/>
 
@@ -289,6 +301,8 @@
                     <Entry
                     Placeholder="USD"
                     Text="{Binding expenseCostFive}"
+                    Keyboard="Numeric"
+                    MaxLength="20"
                     FontSize="14"
                     WidthRequest="125"/>
 
