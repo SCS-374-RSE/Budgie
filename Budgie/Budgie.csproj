@@ -51,6 +51,7 @@
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.1.0" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="5.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -60,15 +61,17 @@
 	  <MauiXaml Update="ViewBudgetPage.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
-	  <MauiXaml Update="HomePage.xaml">
-	    <SubType></SubType>
-	  </MauiXaml>
 	</ItemGroup>
 	<ItemGroup>
 	  <None Remove="CommunityToolkit.Mvvm" />
 	  <None Remove="ViewModels\" />
+	  <None Remove="CommunityToolkit.Maui" />
+	  <None Remove="Resources\Images\Budgie-Logo.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="ViewModels\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Images\budgie_logo.png" />
 	</ItemGroup>
 </Project>
