@@ -13,11 +13,6 @@
             Route="CreateBudgetPage" />
 
         <ShellContent
-            Title="Home"
-            ContentTemplate="{DataTemplate local:HomePage}"
-            Route="HomePage"/>
-
-        <ShellContent
             Title="View"
             ContentTemplate="{DataTemplate local:ViewBudgetPage}"
             Route="ViewBudgetPage"/>

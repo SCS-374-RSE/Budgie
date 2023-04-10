@@ -2,14 +2,27 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Budgie.ViewBudgetPage"
-             Title="ViewBudgetPage"
+             Title="View Budget"
              xmlns:viewmodel="clr-namespace:Budgie.ViewModels"
              x:DataType="viewmodel:ViewPageViewModel">
-    <VerticalStackLayout>
+    <StackLayout
+            Orientation="Vertical"
+            Spacing="25"
+            Padding="30,0"
+            >
+        <Label
+            Text="{Binding BudgetName}"
+            SemanticProperties.HeadingLevel="Level1"
+            FontSize="32"
+            HorizontalOptions="Center" />
+        <Image
+            Source="budgie_logo.png"            
+            HeightRequest="200"/>        
         <TableView Intent="Data">
             <TableRoot>
                 <TableSection Title="{Binding BudgetName}">
-                    <TextCell Text="{Binding BudgetType}"/>
+                    <TextCell Text="Budget Type"
+                              Detail="{Binding BudgetType}"/>
                     
                     <TextCell Text="{Binding ExpenseTypeOne}"
                             Detail="{Binding ExpenseCostOne}" />
@@ -31,5 +44,5 @@
                 </TableSection>
             </TableRoot>
         </TableView>
-    </VerticalStackLayout>
+    </StackLayout>
 </ContentPage>
