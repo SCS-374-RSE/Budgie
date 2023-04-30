@@ -55,14 +55,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="CreateBudgetPage.xaml">
-	    <SubType></SubType>
-	  </MauiXaml>
-	  <MauiXaml Update="ViewBudgetPage.xaml">
-	    <SubType></SubType>
-	  </MauiXaml>
-	</ItemGroup>
-	<ItemGroup>
 	  <None Remove="CommunityToolkit.Mvvm" />
 	  <None Remove="ViewModels\" />
 	  <None Remove="CommunityToolkit.Maui" />
