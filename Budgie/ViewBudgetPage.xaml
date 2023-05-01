@@ -18,38 +18,47 @@
             HeightRequest="200"/>
         <Label
             Text="Your Budgie's"
+            TextColor="Black"
             SemanticProperties.HeadingLevel="Level1"
             FontSize="32"
             HorizontalOptions="Center" />
-        <TableView Intent="Data">
+        <TableView Intent="Data"
+                   BackgroundColor="DarkGray">
             <TableRoot>
                 <TableSection Title="{Binding BudgetName}">
                     <TextCell Text="Budget Type"
                               TextColor="Black"
+                              DetailColor="Black"
                               Detail="{Binding BudgetType}"/>
                     
                     <TextCell Text="{Binding ExpenseTypeOne}"
                               TextColor="Black"
+                              DetailColor="Black"
                             Detail="{Binding ExpenseCostOne}" />
 
                     <TextCell Text="{Binding ExpenseTypeTwo}"
                               TextColor="Black"
+                                DetailColor="Black"
                             Detail="{Binding ExpenseCostTwo}" />
 
                     <TextCell Text="{Binding ExpenseTypeThree}"
                               TextColor="Black"
+                              DetailColor="Black"
                             Detail="{Binding ExpenseCostThree}" />
 
                     <TextCell Text="{Binding ExpenseTypeFour}"
                               TextColor="Black"
+                              DetailColor="Black"
                             Detail="{Binding ExpenseCostFour}" />
 
                     <TextCell Text="{Binding ExpenseTypeFive}"
                               TextColor="Black"
+                              DetailColor="Black"
                             Detail="{Binding ExpenseCostFive}" />
 
                     <TextCell Text="Remainder"
                               TextColor="Black"
+                              DetailColor="Black"
                             Detail="{Binding Remainder}" />
                 </TableSection>
             </TableRoot>
