@@ -12,19 +12,26 @@
             Orientation="Vertical"
             Spacing="25"
             Padding="30,0"
-            VerticalOptions="Center">
-
+            VerticalOptions="Fill"
+            BackgroundColor = "DarkGray"
+            
+>
             <Image
-                Source="budgie_logo.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                 />
+                Source="BudgieBird.png"
+                SemanticProperties.Description="Budgie Logo"
+                HeightRequest="300"
+                HorizontalOptions="Fill"
+                Margin="0"
+                VerticalOptions="Center"
+                WidthRequest="150"
+                Scale="2"/>
 
             <Label
                 Text="Lets Create A Budget!"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="32"
-                HorizontalOptions="Center" />
+                HorizontalOptions="Center"
+                TextColor="Black"/>
             <StackLayout
                 Orientation="Horizontal"
                 VerticalOptions="Center"
@@ -37,13 +44,16 @@
                     Text="{Binding budgetName}"
                     WidthRequest="200"
                     MaxLength="50"
-                    HorizontalTextAlignment="Center"/>
+                    HorizontalTextAlignment="Center"
+                    TextColor="Black"/>
 
                 <Picker
                     SelectedItem="{Binding budgetType}"
                     Title="Budget Type"
                     WidthRequest="200"
-                    HorizontalTextAlignment="Center">
+                    HorizontalTextAlignment="Center"
+                    TextColor="Black"
+                    >
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Daily</x:String>
@@ -60,7 +70,8 @@
                     WidthRequest="200"
                     MaxLength="20"
                     Keyboard="Numeric"
-                    HorizontalTextAlignment="Center"/>
+                    HorizontalTextAlignment="Center"
+                    TextColor="Black"/>
             </StackLayout>
 
             <StackLayout
@@ -78,7 +89,8 @@
 
                     <Label
                    Text="Cost:"
-                   FontSize="14"/>
+                        TextColor="Black"
+                        FontSize="14"/>
 
                 </StackLayout>
 
@@ -92,7 +104,8 @@
                     SelectedItem="{Binding expenseTypeOne}"
                     WidthRequest="200"
                     HorizontalTextAlignment="Center"
-                    Title="Expense Type">
+                    Title="Expense Type"
+                    TextColor="Black">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Food</x:String>
@@ -111,7 +124,8 @@
                     Keyboard="Numeric"
                     MaxLength="20"
                     FontSize="14"
-                    WidthRequest="125"/>
+                    WidthRequest="125"
+                    TextColor="Black"/>
 
                 </StackLayout>
 
@@ -127,7 +141,8 @@
 
                     <Label
                    Text="Cost:"
-                   FontSize="14"/>
+                    TextColor="Black"
+                        FontSize="14"/>
 
                 </StackLayout>
 
@@ -141,7 +156,8 @@
                     SelectedItem="{Binding expenseTypeTwo}"
                     WidthRequest="200"
                     HorizontalTextAlignment="Center"
-                    Title="Expense Type">
+                    Title="Expense Type"
+                    TextColor="Black">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Food</x:String>
@@ -159,7 +175,8 @@
                     Keyboard="Numeric"
                     MaxLength="20"
                     FontSize="14"
-                    WidthRequest="125"/>
+                    WidthRequest="125"
+                    TextColor="Black"/>
 
                 </StackLayout>
 
@@ -175,7 +192,8 @@
 
                     <Label
                    Text="Cost:"
-                   FontSize="14"/>
+                    TextColor="Black"
+                        FontSize="14"/>
 
                 </StackLayout>
 
@@ -189,7 +207,8 @@
                     SelectedItem="{Binding expenseTypeThree}"    
                     WidthRequest="200"
                     HorizontalTextAlignment="Center"
-                    Title="Expense Type">
+                    Title="Expense Type"
+                    TextColor="Black">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Food</x:String>
@@ -208,7 +227,8 @@
                     Keyboard="Numeric"
                     MaxLength="20"
                     FontSize="14"
-                    WidthRequest="125"/>
+                    WidthRequest="125"
+                    TextColor="Black"/>
 
                 </StackLayout>
                 <StackLayout
@@ -223,7 +243,8 @@
 
                     <Label
                    Text="Cost:"
-                   FontSize="14"/>
+                    TextColor="Black"
+                    FontSize="14"/>
 
                 </StackLayout>
 
@@ -237,7 +258,8 @@
                     SelectedItem="{Binding expenseTypeFour}"
                     WidthRequest="200"
                     HorizontalTextAlignment="Center"
-                    Title="Expense Type">
+                    Title="Expense Type"
+                    TextColor="Black">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Food</x:String>
@@ -256,7 +278,8 @@
                     Keyboard="Numeric"
                     MaxLength="20"
                     FontSize="14"
-                    WidthRequest="125"/>
+                    WidthRequest="125"
+                    TextColor="Black"/>
 
                 </StackLayout>
                 <StackLayout
@@ -271,7 +294,8 @@
 
                     <Label
                    Text="Cost:"
-                   FontSize="14"/>
+                        TextColor="Black"
+                        FontSize="14"/>
 
                 </StackLayout>
 
@@ -285,7 +309,10 @@
                     SelectedItem="{Binding expenseTypeFive}"
                     WidthRequest="200"
                     HorizontalTextAlignment="Center"
-                    Title="Expense Type">
+                    Title="Expense Type"
+                    TextColor="Black"
+                    >
+                    
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Food</x:String>
@@ -304,7 +331,8 @@
                     Keyboard="Numeric"
                     MaxLength="20"
                     FontSize="14"
-                    WidthRequest="125"/>
+                    WidthRequest="125"
+                    TextColor="Black"/>
 
                 </StackLayout>
             </StackLayout>
@@ -313,7 +341,9 @@
                 Text="Submit budget info"
                 SemanticProperties.Hint="Submits budget info"
                 Command="{Binding SubmitFormCommand}"
-                HorizontalOptions="Center"/>
+                HorizontalOptions="Center"
+                BackgroundColor="Black"
+                TextColor="LimeGreen"/>
 
         </StackLayout>
     </ScrollView>

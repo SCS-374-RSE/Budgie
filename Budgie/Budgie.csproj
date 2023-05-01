@@ -59,11 +59,13 @@
 	  <None Remove="ViewModels\" />
 	  <None Remove="CommunityToolkit.Maui" />
 	  <None Remove="Resources\Images\Budgie-Logo.png" />
+	  <None Remove="Resources\BudgieBird.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\budgie_logo.png" />
+	  <BundleResource Include="Resources\BudgieBird.png" />
 	</ItemGroup>
 </Project>

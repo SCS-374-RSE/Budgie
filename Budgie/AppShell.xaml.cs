@@ -8,5 +8,6 @@ public partial class AppShell : Shell
 
 		Routing.RegisterRoute(nameof(ViewBudgetPage), typeof(ViewBudgetPage));
 	}
+
 }
 

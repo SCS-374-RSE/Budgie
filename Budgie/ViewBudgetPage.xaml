@@ -9,37 +9,47 @@
             Orientation="Vertical"
             Spacing="25"
             Padding="30,0"
+        BackgroundColor="DarkGray"
+        VerticalOptions="Fill"
             >
+        
+        <Image
+            Source="BudgieBird.png"            
+            HeightRequest="200"/>
         <Label
-            Text="{Binding BudgetName}"
+            Text="Your Budgie's"
             SemanticProperties.HeadingLevel="Level1"
             FontSize="32"
             HorizontalOptions="Center" />
-        <Image
-            Source="budgie_logo.png"            
-            HeightRequest="200"/>        
         <TableView Intent="Data">
             <TableRoot>
                 <TableSection Title="{Binding BudgetName}">
                     <TextCell Text="Budget Type"
+                              TextColor="Black"
                               Detail="{Binding BudgetType}"/>
                     
                     <TextCell Text="{Binding ExpenseTypeOne}"
+                              TextColor="Black"
                             Detail="{Binding ExpenseCostOne}" />
 
                     <TextCell Text="{Binding ExpenseTypeTwo}"
+                              TextColor="Black"
                             Detail="{Binding ExpenseCostTwo}" />
 
                     <TextCell Text="{Binding ExpenseTypeThree}"
+                              TextColor="Black"
                             Detail="{Binding ExpenseCostThree}" />
 
                     <TextCell Text="{Binding ExpenseTypeFour}"
+                              TextColor="Black"
                             Detail="{Binding ExpenseCostFour}" />
 
                     <TextCell Text="{Binding ExpenseTypeFive}"
+                              TextColor="Black"
                             Detail="{Binding ExpenseCostFive}" />
 
                     <TextCell Text="Remainder"
+                              TextColor="Black"
                             Detail="{Binding Remainder}" />
                 </TableSection>
             </TableRoot>
