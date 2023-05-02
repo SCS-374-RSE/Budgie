@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Budgie.ViewBudgetPage"
+             Title="View Budget"
+             xmlns:viewmodel="clr-namespace:Budgie.ViewModels"
+             x:DataType="viewmodel:ViewPageViewModel">
+    <StackLayout
+            Orientation="Vertical"
+            Spacing="25"
+            Padding="30,0"
+        BackgroundColor="DarkGray"
+        VerticalOptions="Fill"
+            >
+        
+        <Image
+            Source="BudgieBird.png"            
+            HeightRequest="200"/>
+        <Label
+            Text="Your Budgie's"
+            TextColor="Black"
+            SemanticProperties.HeadingLevel="Level1"
+            FontSize="32"
+            HorizontalOptions="Center" />
+        <TableView Intent="Data"
+                   BackgroundColor="DarkGray">
+            <TableRoot>
+                <TableSection Title="{Binding BudgetName}">
+                    <TextCell Text="Budget Type"
+                              TextColor="Black"
+                              DetailColor="Black"
+                              Detail="{Binding BudgetType}"/>
+                    
+                    <TextCell Text="{Binding ExpenseTypeOne}"
+                              TextColor="Black"
+                              DetailColor="Black"
+                            Detail="{Binding ExpenseCostOne}" />
+
+                    <TextCell Text="{Binding ExpenseTypeTwo}"
+                              TextColor="Black"
+                                DetailColor="Black"
+                            Detail="{Binding ExpenseCostTwo}" />
+
+                    <TextCell Text="{Binding ExpenseTypeThree}"
+                              TextColor="Black"
+                              DetailColor="Black"
+                            Detail="{Binding ExpenseCostThree}" />
+
+                    <TextCell Text="{Binding ExpenseTypeFour}"
+                              TextColor="Black"
+                              DetailColor="Black"
+                            Detail="{Binding ExpenseCostFour}" />
+
+                    <TextCell Text="{Binding ExpenseTypeFive}"
+                              TextColor="Black"
+                              DetailColor="Black"
+                            Detail="{Binding ExpenseCostFive}" />
+
+                    <TextCell Text="Remainder"
+                              TextColor="Black"
+                              DetailColor="Black"
+                            Detail="{Binding Remainder}" />
+                </TableSection>
+            </TableRoot>
+        </TableView>
+    </StackLayout>
+</ContentPage>

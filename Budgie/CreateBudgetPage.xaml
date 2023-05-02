@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Budgie.CreateBudgetPage"
+             Title="Create New Budget"
+             xmlns:viewmodel="clr-namespace:Budgie.ViewModels"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:DataType="viewmodel:CreatePageViewModel">
+
+    <ScrollView>
+        <StackLayout
+            Orientation="Vertical"
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Fill"
+            BackgroundColor = "DarkGray"
+            
+>
+            <Image
+                Source="BudgieBird.png"
+                SemanticProperties.Description="Budgie Logo"
+                HeightRequest="300"
+                HorizontalOptions="Fill"
+                Margin="0"
+                VerticalOptions="Center"
+                WidthRequest="150"
+                Scale="2"/>
+
+            <Label
+                Text="Lets Create A Budget!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center"
+                TextColor="Black"/>
+            <StackLayout
+                Orientation="Horizontal"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Spacing="25"
+                Padding="30">
+
+                <Entry                    
+                    Placeholder="Budget Name"
+                    Text="{Binding budgetName}"
+                    WidthRequest="200"
+                    MaxLength="50"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Black"/>
+
+                <Picker
+                    SelectedItem="{Binding budgetType}"
+                    Title="Budget Type"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Black"
+                    >
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Daily</x:String>
+                                <x:String>Weekly</x:String>
+                                <x:String>Monthly</x:String>
+                                <x:String>Yearly</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
+
+                <Entry
+                    Text="{Binding takeHomeAmt}"
+                    Placeholder="Take Home Amount USD"
+                    WidthRequest="200"
+                    MaxLength="20"
+                    Keyboard="Numeric"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Black"/>
+            </StackLayout>
+
+            <StackLayout
+                Spacing="10">
+
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="60">
+
+                    <Label
+                    Text="                        "
+                    FontSize="14"/>
+
+                    <Label
+                   Text="Cost:"
+                        TextColor="Black"
+                        FontSize="14"/>
+
+                </StackLayout>
+
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="30">
+
+                <Picker
+                    SelectedItem="{Binding expenseTypeOne}"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center"
+                    Title="Expense Type"
+                    TextColor="Black">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Food</x:String>
+                                <x:String>Bills</x:String>
+                                <x:String>Savings</x:String>
+                                <x:String>Recreational</x:String>
+                                <x:String>Other</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
+
+
+                    <Entry
+                    Placeholder="USD"
+                    Text="{Binding expenseCostOne}"
+                    Keyboard="Numeric"
+                    MaxLength="20"
+                    FontSize="14"
+                    WidthRequest="125"
+                    TextColor="Black"/>
+
+                </StackLayout>
+
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="60">
+
+                    <Label
+                    Text="                        "
+                    FontSize="14"/>
+
+                    <Label
+                   Text="Cost:"
+                    TextColor="Black"
+                        FontSize="14"/>
+
+                </StackLayout>
+
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="30">
+
+                <Picker
+                    SelectedItem="{Binding expenseTypeTwo}"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center"
+                    Title="Expense Type"
+                    TextColor="Black">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Food</x:String>
+                                <x:String>Bills</x:String>
+                                <x:String>Savings</x:String>
+                                <x:String>Recreational</x:String>
+                                <x:String>Other</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
+
+                    <Entry
+                    Placeholder="USD"
+                    Text="{Binding expenseCostTwo}"
+                    Keyboard="Numeric"
+                    MaxLength="20"
+                    FontSize="14"
+                    WidthRequest="125"
+                    TextColor="Black"/>
+
+                </StackLayout>
+
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="60">
+
+                    <Label
+                    Text="                        "
+                    FontSize="14"/>
+
+                    <Label
+                   Text="Cost:"
+                    TextColor="Black"
+                        FontSize="14"/>
+
+                </StackLayout>
+
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="30">
+
+                <Picker
+                    SelectedItem="{Binding expenseTypeThree}"    
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center"
+                    Title="Expense Type"
+                    TextColor="Black">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Food</x:String>
+                                <x:String>Bills</x:String>
+                                <x:String>Savings</x:String>
+                                <x:String>Recreational</x:String>
+                                <x:String>Other</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
+
+
+                    <Entry
+                    Placeholder="USD"
+                    Text="{Binding expenseCostThree}"
+                    Keyboard="Numeric"
+                    MaxLength="20"
+                    FontSize="14"
+                    WidthRequest="125"
+                    TextColor="Black"/>
+
+                </StackLayout>
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="60">
+
+                    <Label
+                    Text="                        "
+                    FontSize="14"/>
+
+                    <Label
+                   Text="Cost:"
+                    TextColor="Black"
+                    FontSize="14"/>
+
+                </StackLayout>
+
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="30">
+
+                <Picker
+                    SelectedItem="{Binding expenseTypeFour}"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center"
+                    Title="Expense Type"
+                    TextColor="Black">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Food</x:String>
+                                <x:String>Bills</x:String>
+                                <x:String>Savings</x:String>
+                                <x:String>Recreational</x:String>
+                                <x:String>Other</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
+
+
+                    <Entry
+                    Placeholder="USD"
+                    Text="{Binding expenseCostFour}"
+                    Keyboard="Numeric"
+                    MaxLength="20"
+                    FontSize="14"
+                    WidthRequest="125"
+                    TextColor="Black"/>
+
+                </StackLayout>
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="60">
+
+                    <Label
+                    Text="                        "
+                    FontSize="14"/>
+
+                    <Label
+                   Text="Cost:"
+                        TextColor="Black"
+                        FontSize="14"/>
+
+                </StackLayout>
+
+                <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Spacing="30">
+
+                <Picker
+                    SelectedItem="{Binding expenseTypeFive}"
+                    WidthRequest="200"
+                    HorizontalTextAlignment="Center"
+                    Title="Expense Type"
+                    TextColor="Black"
+                    >
+                    
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Food</x:String>
+                                <x:String>Bills</x:String>
+                                <x:String>Savings</x:String>
+                                <x:String>Recreational</x:String>
+                                <x:String>Other</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
+
+
+                    <Entry
+                    Placeholder="USD"
+                    Text="{Binding expenseCostFive}"
+                    Keyboard="Numeric"
+                    MaxLength="20"
+                    FontSize="14"
+                    WidthRequest="125"
+                    TextColor="Black"/>
+
+                </StackLayout>
+            </StackLayout>
+
+            <Button
+                Text="Submit budget info"
+                SemanticProperties.Hint="Submits budget info"
+                Command="{Binding SubmitFormCommand}"
+                HorizontalOptions="Center"
+                BackgroundColor="Black"
+                TextColor="LimeGreen"/>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
